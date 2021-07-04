@@ -1,0 +1,6 @@
+<div class="projects">
+    <div class="images" *ngFor="let image of photoArray; index as i" (click)="nav(i)" (click)="setIndex(i)">
+        <img src="https://live.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" />
+    </div>
+
+</div>

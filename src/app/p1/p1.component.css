@@ -1,0 +1,68 @@
+div {
+    border: 2px solid salmon; 
+  
+ }
+ 
+
+ 
+ .projects {
+    width: auto;
+    display: flex;
+    border: 5px solid green;
+    justify-content: space-evenly;
+
+ }
+
+ .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+ }
+ 
+ img {
+     margin: auto;
+     height: 400px;
+     width: 400px;
+     object-fit: cover;
+ }
+
+ .slider{
+    margin: 50px auto;
+    width: 50% 
+ }
+
+ .img-box img{
+     width: 100%
+ }
+
+ .btn {
+     border: none;
+     outline: none;
+     background: #888;
+     padding: 10px 30px;
+     font-size:  20px;
+     color: #ddd;
+     cursor: pointer;
+     margin: 10px auto;
+
+ }
+ 
+ .btn:hover{
+     background: #222;
+     
+ }
+ @media (max-width: 800px){
+
+     .projects {
+        flex-direction: column;
+    }
+     .images {
+        flex-direction: column;
+    }
+    img {
+        height: 15em;
+        width: 15em;
+    }
+ }

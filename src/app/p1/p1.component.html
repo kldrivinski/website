@@ -1,0 +1,13 @@
+<div class="projects">
+    <!--<div class="images" *ngFor="let image of photoArray; index as i" (click)="nav(i)">
+        <img src="https://live.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" />
+    </div>
+-->
+    <div class="slider">
+        <div class="img-box">
+            <img src="{{this.image}}" class="slider-img">
+        </div>
+        <button class="btn" (click)="prev()">previous</button>
+        <button class="btn" (click)="next()">next</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<!-- 
+<p> input item {{item}}</p>
+<label>Add an item <input #newItem></label>
+
+
+<button (click)="addNewItem(newItem.value)">"Add to parent's list</button>
+-->
+<div class="projects">
+    <div class="images" *ngFor="let image of photoArray; index as i" (click)="nav(i)" (click)="setIndex(i)">
+        <img src="https://live.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" />
+    </div>
+
+</div>
