@@ -1,10 +1,12 @@
 <div class="projects">
-    <!--<div class="images" *ngFor="let image of photoArray; index as i" (click)="nav(i)">
+
+    <div class="images" *ngFor="let image of photoArray; index as i" (click)="toggleSlider()"
+        [style.visibility]="gridvisible ? 'visible' : 'hidden'">
         <img src="https://live.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" />
     </div>
--->
-    <div class="slider">
-        <div class="img-box">
+
+    <div class="slider" [style.visibility]="slidevisible ? 'visible' : 'hidden'">
+        <div class="img-box" (click)="toggleSlider()">
             <img src="{{this.image}}" class="slider-img">
         </div>
         <button class="btn" (click)="prev()">previous</button>

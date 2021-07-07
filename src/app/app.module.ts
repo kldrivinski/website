@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
