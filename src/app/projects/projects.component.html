@@ -6,8 +6,19 @@
 <button (click)="addNewItem(newItem.value)">"Add to parent's list</button>
 -->
 <div class="projects">
-    <div class="images" *ngFor="let image of photoArray; index as i" (click)="nav(i)" (click)="setIndex(i)">
+    <div class="images" *ngFor="let image of previews; index as i" (click)="nav(i)" (click)="setIndex(i)"
+        [style.visibility]="gridvisible ? 'visible' : 'hidden'">
+        <!-- [style.visibility]="gridvisible ? 'visible' : 'hidden'" -->
         <img src="https://live.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" />
     </div>
 
+    <!-- [style.visibility]="slidevisible ? 'visible' : 'hidden'" -->
+    <!-- *ngFor="let image of imgArray; index as i" -->
+    <div class="slider" [style.visibility]="slidevisible ? 'visible' : 'hidden'">
+        <div class="img-box" (click)="toggleSlider()">
+            <img src="{{imgArray[0]}}" class="slider-img" />
+        </div>
+        <button class="btn" (click)="prev()">previous</button>
+        <button class="btn" (click)="next()">next</button>
+    </div>
 </div>
